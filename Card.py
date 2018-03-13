@@ -22,11 +22,13 @@ class Card:
     skillyon = ""
     skillgo = ""
     supportskill = ""
-    comment = ""
     # \Character Info#
 
     def __init__(self, title):
         self.name = title
+
+    def __str__(self):
+        return self.name + "\n" + self.cost + "/" + self.promotion
 
     def add_info(self, arr):
         self.color = arr[0]
@@ -49,9 +51,4 @@ class Card:
         self.skillyon = arr[17]
         self.skillgo = arr[18]
         self.supportskill = arr[19]
-        self.comment = arr[20]
-
-
-
-
 
